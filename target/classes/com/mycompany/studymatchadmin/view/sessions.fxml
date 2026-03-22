@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+
+<VBox spacing="25"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.studymatchadmin.controller.SessionsController">
+
+    <!-- KPI ROW -->
+    <HBox spacing="20">
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="totalSessionsLabel" text="0" styleClass="kpi-value"/>
+    <Label text="Total Sessions" styleClass="kpi-title"/>
+</VBox>
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="completionRateLabel" text="0%" styleClass="kpi-value"/>
+    <Label text="Completion Rate" styleClass="kpi-title"/>
+</VBox>
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="cancelRateLabel" text="0%" styleClass="kpi-value"/>
+    <Label text="Cancellation Rate" styleClass="kpi-title"/>
+</VBox>
+
+    </HBox>
+
+    <!-- SESSION CHART -->
+    <VBox spacing="15" styleClass="card">
+
+        <Label text="Monthly Sessions"
+               styleClass="section-title"/>
+
+        <BarChart fx:id="sessionChart"
+                  legendVisible="false"
+                  prefHeight="300">
+
+            <xAxis>
+                <CategoryAxis label="Month"/>
+            </xAxis>
+
+            <yAxis>
+                <NumberAxis label="Sessions"/>
+            </yAxis>
+
+        </BarChart>
+
+    </VBox>
+
+</VBox>

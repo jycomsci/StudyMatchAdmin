@@ -1,0 +1,15 @@
+CommissionController.java (need database, fake data)
+ReportsController.java (need database)
+StudentsController.java
+TutorsController.java
+
+EMPTY:
+
+EmailLog.java
+
+
+NOTE: ANG REPOSITORY FILES KAY MAO NI ANG MAG TAWAG SA DATABASE, TAPOS ANG SERVICE FILES KAY API MAG TAWAG KAY REPOSITORY tapos repository mag tawag sa database
+
+
+
+JEOFFREY PWEDE KA MAG ADD MISKAN BASTA RELATED TAPOS IF NEED PAG CREATE PD UG REPOSITORY KUNG WALA PAY REPOSITORY ANG SERVICE

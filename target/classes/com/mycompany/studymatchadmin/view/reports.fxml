@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="30"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.studymatchadmin.controller.ReportsController">
+
+    <Label text="Monthly Reports"
+           styleClass="section-title"/>
+
+    <!-- KPI SUMMARY -->
+    <HBox spacing="20">
+
+        <VBox styleClass="card kpi-card" spacing="5">
+            <Label text="1,230" styleClass="kpi-value"/>
+            <Label text="Total Sessions" styleClass="kpi-title"/>
+        </VBox>
+
+        <VBox styleClass="card kpi-card" spacing="5">
+            <Label text="320" styleClass="kpi-value"/>
+            <Label text="New Users" styleClass="kpi-title"/>
+        </VBox>
+
+        <VBox styleClass="card kpi-card" spacing="5">
+            <Label text="4.7" styleClass="kpi-value"/>
+            <Label text="Average Tutor Rating" styleClass="kpi-title"/>
+        </VBox>
+
+        <VBox styleClass="card kpi-card" spacing="5">
+            <Label text="91%" styleClass="kpi-value"/>
+            <Label text="AI Success Rate" styleClass="kpi-title"/>
+        </VBox>
+
+    </HBox>
+
+    <!-- REPORT TABLE -->
+    <VBox spacing="15" styleClass="card">
+
+        <Label text="Monthly Breakdown"
+               styleClass="section-title"/>
+
+        <TableView fx:id="reportTable" prefHeight="350">
+
+            <columns>
+
+                <TableColumn fx:id="monthColumn"
+                             text="Month"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="sessionsColumn"
+                             text="Sessions"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="usersColumn"
+                             text="New Users"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="accuracyColumn"
+                             text="AI Accuracy (%)"
+                             prefWidth="150"/>
+
+            </columns>
+
+        </TableView>
+
+    </VBox>
+
+    <!-- EXPORT BUTTON -->
+    <HBox alignment="CENTER_RIGHT">
+
+        <Button text="Export Report"
+                onAction="#handleExport"/>
+
+    </HBox>
+
+</VBox>

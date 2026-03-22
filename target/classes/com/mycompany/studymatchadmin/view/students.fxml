@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+
+<VBox spacing="25"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.studymatchadmin.controller.StudentsController">
+
+    <!-- KPI ROW -->
+    <HBox spacing="20">
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="activeStudentsLabel" text="0" styleClass="kpi-value"/>
+    <Label text="Active Students" styleClass="kpi-title"/>
+</VBox>
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="avgSpendLabel" text="₱ 0" styleClass="kpi-value"/>
+    <Label text="Avg Spend / Student" styleClass="kpi-title"/>
+</VBox>
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="retentionRateLabel" text="0%" styleClass="kpi-value"/>
+    <Label text="Retention Rate" styleClass="kpi-title"/>
+</VBox>
+    </HBox>
+
+    <!-- GROWTH CHART -->
+    <VBox spacing="15" styleClass="card">
+
+        <Label text="Student Growth Trend"
+               styleClass="section-title"/>
+
+        <LineChart fx:id="growthChart"
+                   legendVisible="false"
+                   prefHeight="300">
+
+            <xAxis>
+                <CategoryAxis label="Month"/>
+            </xAxis>
+
+            <yAxis>
+                <NumberAxis label="Students"/>
+            </yAxis>
+
+        </LineChart>
+
+    </VBox>
+
+</VBox>

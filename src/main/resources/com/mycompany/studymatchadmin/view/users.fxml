@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="25"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.studymatchadmin.controller.UsersController">
+
+    <!-- HEADER SECTION -->
+    <HBox spacing="15" alignment="CENTER_LEFT">
+
+        <Label text="User Management"
+               styleClass="section-title"/>
+
+        <Region HBox.hgrow="ALWAYS"/>
+
+        <TextField fx:id="searchField"
+                   promptText="Search user..."
+                   prefWidth="250"/>
+
+        <ComboBox fx:id="roleFilter"
+                  promptText="Filter by Role"
+                  prefWidth="160"/>
+        
+        <ComboBox fx:id="statusFilter"
+          promptText="Filter by Status"
+          prefWidth="160"/>
+
+        <Button text="Refresh"
+                onAction="#handleRefresh"/>
+
+    </HBox>
+
+    <!-- TABLE SECTION -->
+    <TableView fx:id="userTable"
+               prefHeight="500">
+
+        <columns>
+
+            <TableColumn fx:id="idColumn"
+                         text="ID"
+                         prefWidth="80"/>
+
+            <TableColumn fx:id="nameColumn"
+                         text="Name"
+                         prefWidth="200"/>
+
+            <TableColumn fx:id="emailColumn"
+                         text="Email"
+                         prefWidth="250"/>
+
+            <TableColumn fx:id="roleColumn"
+                         text="Role"
+                         prefWidth="150"/>
+
+            <TableColumn fx:id="statusColumn"
+                         text="Status"
+                         prefWidth="120"/>
+            
+            <TableColumn fx:id="actionColumn" text="Actions" prefWidth="120"/>
+
+        </columns>
+
+    </TableView>
+
+</VBox>

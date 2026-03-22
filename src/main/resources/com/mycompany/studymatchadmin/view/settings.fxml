@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mycompany.studymatchadmin.controller.SettingsController"
+      spacing="30"
+      styleClass="content-area">
+
+    <Label text="Appearance Settings"
+           styleClass="page-title"/>
+
+    <VBox styleClass="card" spacing="25">
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Theme Mode:"/>
+            <Button text="Light" onAction="#setLight"/>
+            <Button text="Dark" onAction="#setDark"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Accent Color:"/>
+            <Button text="Purple" onAction="#setPurple"/>
+            <Button text="Blue" onAction="#setBlue"/>
+            <Button text="Green" onAction="#setGreen"/>
+        </HBox>
+
+    </VBox>
+
+</VBox>

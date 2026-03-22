@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+
+<VBox spacing="25"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.studymatchadmin.controller.RevenueController">
+
+    <!-- KPI ROW -->
+    <HBox spacing="20">
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="totalRevenueLabel" text="₱ 0" styleClass="kpi-value"/>
+    <Label text="Total Revenue" styleClass="kpi-title"/>
+</VBox>
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="tutorPayoutLabel" text="₱ 0" styleClass="kpi-value"/>
+    <Label text="Tutor Payout" styleClass="kpi-title"/>
+</VBox>
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="platformCommissionLabel" text="₱ 0" styleClass="kpi-value"/>
+    <Label text="Platform Commission" styleClass="kpi-title"/>
+</VBox>
+
+    </HBox>
+
+    <!-- REVENUE TREND -->
+    <VBox spacing="15" styleClass="card">
+
+        <Label text="Monthly Revenue Trend"
+               styleClass="section-title"/>
+
+        <LineChart fx:id="revenueChart"
+                   legendVisible="true"
+                   prefHeight="300">
+
+            <xAxis>
+                <CategoryAxis label="Month"/>
+            </xAxis>
+
+            <yAxis>
+                <NumberAxis label="Amount (₱)"/>
+            </yAxis>
+
+        </LineChart>
+
+    </VBox>
+
+</VBox>

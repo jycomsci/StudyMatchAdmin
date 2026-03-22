@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+
+<VBox spacing="25"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.studymatchadmin.controller.CommissionController">
+
+    <!-- KPI ROW -->
+    <HBox spacing="20">
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="totalCommissionLabel" text="₱ 0" styleClass="kpi-value"/>
+    <Label text="Total Commission" styleClass="kpi-title"/>
+</VBox>
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="commissionRateLabel" text="0%" styleClass="kpi-value"/>
+    <Label text="Commission Rate" styleClass="kpi-title"/>
+</VBox>
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="growthLabel" text="0%" styleClass="kpi-value"/>
+    <Label text="Growth This Month" styleClass="kpi-title"/>
+</VBox>
+
+    </HBox>
+
+    <!-- COMMISSION CHART -->
+    <VBox spacing="15" styleClass="card">
+
+        <Label text="Commission Growth Trend"
+               styleClass="section-title"/>
+
+        <LineChart fx:id="commissionChart"
+                   legendVisible="false"
+                   prefHeight="300">
+
+            <xAxis>
+                <CategoryAxis label="Month"/>
+            </xAxis>
+
+            <yAxis>
+                <NumberAxis label="Commission (₱)"/>
+            </yAxis>
+
+        </LineChart>
+
+    </VBox>
+
+</VBox>

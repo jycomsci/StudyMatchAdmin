@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+
+<VBox spacing="25"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.studymatchadmin.controller.DashboardController"
+      styleClass="main-content">
+
+    <!-- ================= KPI ROW ================= -->
+    <HBox spacing="35">
+
+        <VBox styleClass="card kpi-card">
+            <Label fx:id="totalRevenueLabel" text="₱ 0" styleClass="kpi-value"/>
+            <Label text="Total Revenue" styleClass="kpi-title"/>
+        </VBox>
+
+        <VBox styleClass="card kpi-card">
+            <Label fx:id="totalCommissionLabel" text="₱ 0" styleClass="kpi-value"/>
+            <Label text="Total Commission" styleClass="kpi-title"/>
+        </VBox>
+
+        <VBox styleClass="card kpi-card">
+            <Label fx:id="activeSessionsLabel" text="0" styleClass="kpi-value"/>
+            <Label text="Active Sessions Today" styleClass="kpi-title"/>
+        </VBox>
+
+        <VBox styleClass="card kpi-card">
+            <Label fx:id="activeTutorsLabel" text="0" styleClass="kpi-value"/>
+            <Label text="Active Tutors" styleClass="kpi-title"/>
+        </VBox>
+
+    </HBox>
+
+    <!-- ================= REVENUE TREND ================= -->
+    <VBox spacing="15" styleClass="card">
+
+        <Label text="Revenue Trend (Monthly)"
+               styleClass="section-title"/>
+
+        <LineChart fx:id="revenueChart"
+                   legendVisible="false"
+                   prefHeight="300">
+
+            <xAxis>
+                <CategoryAxis label="Month"/>
+            </xAxis>
+
+            <yAxis>
+                <NumberAxis label="Revenue (₱)"/>
+            </yAxis>
+
+        </LineChart>
+
+    </VBox>
+
+    <!-- ================= LOWER SECTION ================= -->
+    <HBox spacing="20">
+
+        <!-- Recent Sessions -->
+        <VBox spacing="15" styleClass="card" VBox.vgrow="ALWAYS">
+
+            <Label text="Recent Sessions"
+                   styleClass="section-title"/>
+
+            <TableView fx:id="sessionsTable" prefHeight="250">
+
+                <columns>
+                    <TableColumn text="Tutor" fx:id="tutorCol"/>
+                    <TableColumn text="Student" fx:id="studentCol"/>
+                    <TableColumn text="Amount" fx:id="amountCol"/>
+                    <TableColumn text="Status" fx:id="statusCol"/>
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+        <!-- Alerts Panel -->
+        <VBox spacing="15" styleClass="card" prefWidth="300">
+
+            <Label text="System Alerts"
+                   styleClass="section-title"/>
+
+            <Label text="⚠ High cancellation rate today"
+                   styleClass="alert-warning"/>
+
+            <Label text="✔ API response stable"
+                   styleClass="alert-success"/>
+
+            <Label text="⚠ 3 failed payments detected"
+                   styleClass="alert-danger"/>
+
+        </VBox>
+
+    </HBox>
+
+</VBox>

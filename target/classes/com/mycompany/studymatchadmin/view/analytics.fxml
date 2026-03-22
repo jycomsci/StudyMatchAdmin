@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="25"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.studymatchadmin.controller.AnalyticsController"
+      styleClass="analytics-root">
+
+    <!-- TITLE -->
+    <Label text="System Analytics"
+           styleClass="analytics-title"/>
+
+    <!-- ENTERPRISE TAB NAVIGATION -->
+<HBox spacing="10" styleClass="analytics-tabs">
+
+    <Button fx:id="revenueTab"
+            text="Revenue"
+            onAction="#loadRevenue"
+            styleClass="analytics-tab-btn"/>
+
+    <Button fx:id="tutorsTab"
+            text="Tutors"
+            onAction="#loadTutors"
+            styleClass="analytics-tab-btn"/>
+
+    <Button fx:id="studentsTab"
+            text="Students"
+            onAction="#loadStudents"
+            styleClass="analytics-tab-btn"/>
+
+    <Button fx:id="sessionsTab"
+            text="Sessions"
+            onAction="#loadSessions"
+            styleClass="analytics-tab-btn"/>
+
+    <Button fx:id="commissionTab"
+            text="Commission"
+            onAction="#loadCommission"
+            styleClass="analytics-tab-btn"/>
+
+</HBox>
+
+    <!-- DYNAMIC CONTENT AREA -->
+    <StackPane fx:id="analyticsContent"
+               styleClass="analytics-content"
+               VBox.vgrow="ALWAYS"/>
+
+</VBox>

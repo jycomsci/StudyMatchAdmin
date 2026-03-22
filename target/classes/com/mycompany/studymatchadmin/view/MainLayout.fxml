@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.mycompany.studymatchadmin.controller.MainLayoutController"
+            fx:id="rootPane"
+            stylesheets="@../view/style.css"
+            styleClass="app-root">
+
+    <!-- ================= SIDEBAR ================= -->
+    <left>
+        <VBox fx:id="sidebar" styleClass="sidebar" spacing="15">
+
+    <!-- LOGO SECTION -->
+<VBox alignment="CENTER" spacing="18" styleClass="logo-area">
+
+    <ImageView fx:id="logoImage"
+               fitWidth="150"
+               preserveRatio="true">
+        <image>
+            <Image url="@../assets/2dicon.png"/>
+        </image>
+    </ImageView>
+
+    <Separator maxWidth="160"/>
+
+</VBox>
+
+    <!-- REMOVE THE EXTRA SEPARATOR HERE -->
+
+    <!-- NAVIGATION -->
+<VBox spacing="5">
+
+    <Button text="Dashboard"
+            fx:id="dashboardBtn"
+            onAction="#loadDashboard"
+            styleClass="nav-btn"/>
+
+    <Button text="Users"
+            fx:id="usersBtn"
+            onAction="#loadUsers"
+            styleClass="nav-btn"/>
+
+    <Button text="Analytics"
+            fx:id="analyticsBtn"
+            onAction="#loadAnalytics"
+            styleClass="nav-btn"/>
+
+    <Button text="Reports"
+            fx:id="reportsBtn"
+            onAction="#loadReports"
+            styleClass="nav-btn"/>
+
+</VBox>
+
+    <Region VBox.vgrow="ALWAYS"/>
+
+    <!-- BOTTOM SECTION -->
+    <VBox spacing="5">
+
+        <Separator/>
+
+        <Button text="Settings"
+                fx:id="settingsBtn"
+                onAction="#loadSettings"
+                styleClass="nav-btn"/>
+
+    </VBox>
+
+</VBox>
+    </left>
+
+    <!-- ================= TOPBAR ================= -->
+    <top>
+        <HBox styleClass="topbar" spacing="20" alignment="CENTER_LEFT">
+
+            <Button text="☰"
+                    onAction="#toggleSidebar"
+                    styleClass="icon-btn"/>
+
+            <Label text="Admin Dashboard"
+                   styleClass="page-title"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <HBox spacing="12" alignment="CENTER_RIGHT">
+
+                <MenuButton text="Admin"
+                            styleClass="profile-menu">
+                    <items>
+                        <MenuItem text="Profile"/>
+                        <MenuItem text="Logout" onAction="#logout"/>
+                    </items>
+                </MenuButton>
+
+            </HBox>
+
+        </HBox>
+    </top>
+
+    <!-- ================= CONTENT ================= -->
+    <center>
+        <StackPane fx:id="contentArea"
+                   styleClass="content-area"/>
+    </center>
+
+</BorderPane>

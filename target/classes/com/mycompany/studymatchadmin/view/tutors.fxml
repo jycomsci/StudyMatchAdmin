@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+
+<VBox spacing="25"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.studymatchadmin.controller.TutorsController">
+
+    <!-- KPI ROW -->
+    <HBox spacing="20">
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="totalTutorsLabel" text="0" styleClass="kpi-value"/>
+    <Label text="Total Tutors" styleClass="kpi-title"/>
+</VBox>
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="avgEarningsLabel" text="₱ 0" styleClass="kpi-value"/>
+    <Label text="Avg Monthly Earnings" styleClass="kpi-title"/>
+</VBox>
+
+<VBox styleClass="card kpi-card">
+    <Label fx:id="activeRateLabel" text="0%" styleClass="kpi-value"/>
+    <Label text="Active Rate" styleClass="kpi-title"/>
+</VBox>
+
+    </HBox>
+
+    <!-- EARNINGS CHART -->
+    <VBox spacing="15" styleClass="card">
+
+        <Label text="Top Tutor Earnings"
+               styleClass="section-title"/>
+
+        <BarChart fx:id="earningsChart"
+                  legendVisible="false"
+                  prefHeight="300">
+
+            <xAxis>
+                <CategoryAxis label="Tutor"/>
+            </xAxis>
+
+            <yAxis>
+                <NumberAxis label="Earnings (₱)"/>
+            </yAxis>
+
+        </BarChart>
+
+    </VBox>
+
+</VBox>

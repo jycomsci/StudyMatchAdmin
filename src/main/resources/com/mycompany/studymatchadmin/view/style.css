@@ -1,0 +1,330 @@
+/* =====================================================
+   ROOT
+===================================================== */
+
+.app-root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #ECE9FF   ;
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+    -fx-background-color: white;
+    -fx-pref-width: 240;
+    -fx-padding: 32 20;
+    -fx-spacing: 14;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 0 1 0 0;
+}
+
+.logo-text {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* Navigation Buttons */
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4b5563;
+    -fx-font-size: 14px;
+    -fx-padding: 12 18;
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+/* subtle hover */
+.nav-btn:hover {
+    -fx-background-color: #f3f4f6;
+    -fx-background-radius: 10;
+}
+
+/* improved active */
+.nav-btn.active {
+    -fx-font-weight: bold;
+    -fx-border-width: 0 0 0 4;
+    -fx-background-radius: 10;
+}
+
+/* =====================================================
+   TOPBAR
+===================================================== */
+
+.topbar {
+    -fx-background-color: white;
+    -fx-padding: 22 40;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 0 0 1 0;
+}
+
+.page-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #111827;
+}   
+
+.icon-btn {
+    -fx-background-color: #f3f4f6;
+    -fx-background-radius: 50;
+    -fx-pref-width: 38;
+    -fx-pref-height: 38;
+    -fx-cursor: hand;
+}
+
+.icon-btn:hover {
+    -fx-background-color: #e5e7eb;
+}
+
+/* =====================================================
+   CONTENT AREA
+===================================================== */
+
+.content-area {
+    -fx-background-color: #ECE9FF;
+    -fx-padding: 35;
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-background-radius: 20;
+    -fx-padding: 32;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 35, 0.3, 0, 14);
+}
+
+/* ================= KPI POLISH ================= */
+
+.kpi-value {
+    -fx-font-size: 28px; /* bigger */
+    -fx-font-weight: 800;
+    -fx-text-fill: #111827;
+}
+
+.kpi-title {
+    -fx-font-size: 12px;
+    -fx-text-fill: #9ca3af; /* softer gray */
+    -fx-letter-spacing: 0.5px;
+}
+
+.kpi-card {
+    -fx-background-color: white;
+    -fx-background-radius: 18;
+    -fx-padding: 24;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 30, 0.25, 0, 10);
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f3f4f6;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #e0e7ff;
+}
+
+/* =====================================================
+   CHART
+===================================================== */
+
+.chart {
+    -fx-background-color: transparent;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-vertical-grid-lines,
+.chart-horizontal-grid-lines {
+    -fx-stroke: rgba(0,0,0,0.05);
+}
+
+.chart-series-line {
+    -fx-stroke-width: 3px;
+}
+.chart-legend {
+    -fx-background-color: transparent;
+}
+.chart-legend {
+    -fx-background-color: transparent;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.primary-btn {
+    -fx-background-radius: 12;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 12 12;
+    -fx-cursor: hand;
+}
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+.login-background {
+    -fx-background-image: url("../assets/loginbackclear.png");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.login-card {
+    -fx-background-color: rgba(255, 255, 255, 0.88);
+    -fx-background-radius: 22;
+    -fx-padding: 45 40;
+    -fx-spacing: 18;
+    -fx-border-radius: 22;
+    -fx-border-color: rgba(255,255,255,0.4);
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 40, 0.25, 0, 15);
+}
+
+.login-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.login-input {
+    -fx-pref-height: 42;
+    -fx-background-radius: 10;
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-border-radius: 10;
+    -fx-border-color: rgba(0,0,0,0.08);
+    -fx-padding: 0 12;
+}
+
+.login-input:focused {
+    -fx-border-color: #7c3aed;
+    -fx-background-color: white;
+}
+
+.login-button {
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-pref-height: 42;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-opacity: 0.92;
+}
+
+.logo-area {
+    -fx-padding: 15 10 25 10;
+    -fx-alignment: center;
+}
+
+.logo-area ImageView {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 15, 0.3, 0, 4);
+}
+
+/* =====================================================
+   DARK MODE (FIXED SELECTORS)
+===================================================== */
+
+.app-root.dark-mode {
+    -fx-background-color: #111827;
+}
+
+.app-root.dark-mode .sidebar {
+    -fx-background-color: #1f2937;
+    -fx-border-color: #374151;
+}
+
+.app-root.dark-mode .logo-text,
+.app-root.dark-mode .page-title {
+    -fx-text-fill: white;
+}
+
+.app-root.dark-mode .nav-btn {
+    -fx-text-fill: #cbd5e1;
+}
+
+.app-root.dark-mode .nav-btn:hover {
+    -fx-background-color: rgba(255,255,255,0.05);
+}
+
+.app-root.dark-mode .topbar {
+    -fx-background-color: #1f2937;
+    -fx-border-color: #374151;
+}
+
+.app-root.dark-mode .card,
+.app-root.dark-mode .kpi-card {
+    -fx-background-color: #1f2937;
+}
+
+.app-root.dark-mode .content-area {
+    -fx-background-color: #111827;
+}
+
+/* =====================================================
+   ACCENT SYSTEM (FIXED SELECTORS)
+===================================================== */
+
+/* PURPLE */
+.app-root.accent-purple .nav-btn.active {
+    -fx-border-color: #7c3aed;
+    -fx-text-fill: #7c3aed;
+}
+
+.app-root.accent-purple .primary-btn,
+.app-root.accent-purple .login-button {
+    -fx-background-color: #7c3aed;
+}
+
+.app-root.accent-purple .chart-series-line {
+    -fx-stroke: #7c3aed;
+}
+
+/* BLUE */
+.app-root.accent-blue .nav-btn.active {
+    -fx-border-color: #2563eb;
+    -fx-text-fill: #2563eb;
+}
+
+.app-root.accent-blue .primary-btn,
+.app-root.accent-blue .login-button {
+    -fx-background-color: #2563eb;
+}
+
+.app-root.accent-blue .chart-series-line {
+    -fx-stroke: #2563eb;
+}
+
+/* GREEN */
+.app-root.accent-green .nav-btn.active {
+    -fx-border-color: #16a34a;
+    -fx-text-fill: #16a34a;
+}
+
+.app-root.accent-green .primary-btn,
+.app-root.accent-green .login-button {
+    -fx-background-color: #16a34a;
+}
+
+.app-root.accent-green .chart-series-line {
+    -fx-stroke: #16a34a;
+}
